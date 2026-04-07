@@ -91,3 +91,22 @@ body {
   P {
     font-weight: bold;
   }
+
+  .FirstFooter {
+    padding: 20px;
+    margin: 20px;
+    background-color: #553A41;
+    color: #E6E8E6;
+  }
+
+  .SecondFooter {
+    padding: 5px;
+    margin: 20px;
+    background-color: #553A41;
+    color:#E6E8E6;
+  }
+
+  .Copyright {
+    display:flex;
+    justify-content: space-between;
+  }
