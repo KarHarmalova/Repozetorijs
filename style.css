@@ -48,7 +48,7 @@ header nav {
   .products {
     background: #d1b7be;
     padding: 20px;
-    margin: 20px;
+    margin-top: 20px;
   }
  
   .products h2 {
@@ -97,14 +97,14 @@ header nav {
 
   .FirstFooter {
     padding: 20px;
-    margin: 20px;
+    margin-top: 20px;
     background-color: #553A41;
     color: #E6E8E6;
   }
 
   .SecondFooter {
     padding: 5px;
-    margin: 20px;
+    margin-top: 20px;
     background-color: #553A41;
     color:#E6E8E6;
   }
