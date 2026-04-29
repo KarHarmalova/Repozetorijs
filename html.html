@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myId">Virsraksts</h1>
+   <!-- <button id="btn">Poga</button> -->
+    <button id = "upgratebtn">Upgrate</button>
+    <img id = "btn" src = "https://www.dessertfortwo.com/wp-content/uploads/2023/04/Single-Serve-Chocolate-Chip-Cookie-5-735x1103.jpg" width = "300" height = "100">
+ <!--   <button onclick="myFunction()">POGA 2</button> -->
+</body>
+<script>
+    const el = document.getElementById("myId")
+    const btn = document.getElementById("btn")
+    const upgratebtn = document.getElementById("upgratebtn")
+    
+   // function myFunction() {
+      //  alert("AJDHSHDAHFS")
+   // }
+  //  btn.addEventListener("click", myFunction)
+   
+      // allert("67676767676767676767676767")
+   // })
+    //1. Uz ko mes gaidam
+    //2. Ko mes daram
+
+   // console.log(el.innerHTML)
+    //if (el.innerHTML === "Virskrasts") {
+    //    console.log("el ir virsraksts")
+    //}
+    let amount = 0
+    let bonus = 1
+    let cost = 100
+    let winScore = 200
+    let chance = 5
+
+    upgratebtn.innerHTML = "Upgrate: " + cost 
+
+    btn.addEventListener("click", () => {
+        let random = Math.floar(Math.randomn() * 100)
+        if (random < chance) {
+            amount += bonus * 10
+            el.innerHTML = amount
+            el.style.color = "green"
+        }
+        else if (random === 99) {
+            amount = 0
+            el.style.color = "red"
+        else (
+            amount += bonus
+            el.innerHTML =amount
+            el.style.color = "orange"
+        )
+        
+        }
+        amount += bonus // amount = amount + bonus
+        el.innerHTML = amount
+        el.style.color = "red"
+        if (amount >= winScore) {
+            alert("Jūs Uzvarējat, spele END ")
+        }
+    })
+
+    upgratebtn.addEventListener("click", () => {
+        if (amount >= cost) {
+            amount -= cost
+            bonus += 1
+            cost *= 2 //cost = cost * 2
+            el.innerHTML = amount 
+            btn.src = "https://www.dessertfortwo.com/wp-content/uploads/2023/04/Single-Serve-Chocolate-Chip-Cookie-5-735x1103.jpg"
+        }
+        else {
+            alert('NEPIETIEK')
+        }
+    })
+
+
+</script>
+</html>
