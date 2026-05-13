@@ -30,7 +30,7 @@
         font-family: Arial, sans-serif;
     }
 
-    /* Центральный блок */
+    
     .game-container{
         display:flex;
         flex-direction:column;
@@ -38,14 +38,14 @@
         gap:20px;
     }
 
-    /* Нолик */
+    
     #score{
         font-size:60px;
         color:white;
-        text-shadow: 2px 2px 10px black;
+        
     }
 
-    /* Хомяк */
+    
     #btn{
         width:500px;
         margin-top:100px;
@@ -57,7 +57,7 @@
         transform:scale(0.95);
     }
 
-    /* Кнопки */
+    
     .buttons{
         display:flex;
         gap:15px;
@@ -84,23 +84,58 @@
 </style>
 </head>
 
+
+
+
 <body>
+
 
 <div class="game-container">
 
-    <!-- Нолик -->
+    
     <h1 id="score">0</h1>
 
-    <!-- Хомяк -->
+    
     <img id="btn" src="sad_hamster.png">
 
-    <!-- Кнопки -->
+    
     <div class="buttons">
-        <button>Upgrade hamster</button>
-        <button>Upgrade background</button>
-        <button>Upgrade kliker</button>
+        <button id="upgrade-hamster">Upgrade hamster</button>
+        <button id="upgrade-background">Upgrade background</button>
+        <button id="upgrade-kliker">Upgrade kliker</button>
     </div>
+    
+    <script>
+    
+    const hamsterBtn = document.getElementById("upgrade-hamster")
+    const backgroundBtn = document.getElementById("upgrade-background")
+    const klikerBtn = document.getElementById("upgrade-kliker")
+    
+    let amount = 0
+    let cost = 200
+    let hamstercost = 400
+    let backgroundcost = 2
+    
+    hamsterBtn.innerHTML = "Upgrade hamster: " + cost
+    backgroundBtn.innerHTML = "Upgrade background: " + hamstercost
+    klikerBtn.innerHTML = "Upgrade kliker: " + backgroundcost
 
-</div>
+    btn.addEventListener("click", () => {
+    amount = amount + 1
+    score.innerHTML = amount })
+
+    klikerbtn.addEventListener("click", () => {
+        if (amount >= cost) {
+            amount -= cost
+            cost *= 2 //cost = cost * 2
+            el.innerHTML = amount 
+        }
+        else {
+            alert('NEPIETIEK')
+        }
+    })
+    
+    </script>
 
 </body>
+</html>
